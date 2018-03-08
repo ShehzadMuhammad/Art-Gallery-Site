@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" type="text/css" href="assign1.css">
+</head>
+  
+<body>
+  <table border="1">
+    <tr>
+      <td>
+        <h1>Group</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Pietro Andreoli 500639696
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Shehzad Muhammad 500592053
+      </td>
+    </tr>
+  </table>
+  <br>
+  
+  
+  <div class="dropdown">
+    <button class="dropbtn">Art Works</button>
+    <div class="dropdown-content">
+    <a href="#" onclick="showArt('Mona Lisa')">Mona Lisa</a>
+    <a href="#" onclick="showArt('The Night Watch')">The Night Watch</a>
+    <a href="#" onclick="showArt('Third Class Carriage')">Third Class Carriage</a>
+    <a href="#" onclick="showArt('The Starry Night')">The Starry Night</a>
+    <a href="#" onclick="showArt('Guernica')">Guernica</a>
+  </div>
+</div>
+
+<div class="drop2">
+    <button class="btn2">Artist</button>
+    <div class="drop2-content">
+    <a href="#" onclick="showArt('Raphael Sanzio da Urbino')">Raphael Sanzio da Urbino</a>
+    <a href="#" onclick="showArt('Leonardo di ser Piero da Vinci')">Leonardo di ser Piero da Vinci</a>
+    <a href="#" onclick="showArt('Rembrandt Harmenszoon van Rjin')">Rembrandt Harmenszoon van Rjin</a>
+    <a href="#" onclick="showArt('Pablo Picasso')">Pablo Picasso</a>
+    <a href="#" onclick="showArt('Michelangelo')"> Michelangelo di Lodovico Buonarroti Simoni </a>
+  </div>
+</div>
+<br>
+<div id="ArtSection" style="visibility: hidden;">
+  <div id="image">
+    <img id="artImage" src="" width="100%" height="100%">
+    
+  </div>
+  <div id="info">
+   <p id="artDescription">
+
+    </p>
+  </div>
+</div>
+<script>
+function showArt(name) {
+
+    //document.getElementById("ArtistSection").style.visibility = "hidden";
+    document.getElementById("ArtSection").style.visibility = "visible";
+    var artsrc = "";
+    var description = "";
+    switch (name){
+      case "Mona Lisa":
+        artsrc = "Resources/Monalisa.jpg";
+        description = "Date of Production: 1503–06, perhaps continuing until c. 1517<br>Type of the Painting Color: Oil<br>Dimensions: 65 cm x 90 cm<br>Location: Musée du Louvre, Paris<br>Artist: Leonardo da Vinci<br>Price: $800 M<br>Genre: Portrait"
+        break;
+
+      case "The Night Watch":
+        artsrc = "Resources/night.jpg";
+        description = "Date of Production: 1642<br>Type of the Painting Color: Oil<br>Dimensions: 363 cm × 437 cm<br>Location: Amsterdam Museum, Paris<br>Artist: Rembrandt van Rijn<br>Price: $23,000<br>Genre: Baroque"
+        break;
+
+      case "Third Class Carriage":
+        artsrc = "Resources/thirdclass.jpg";
+        description = "Date of Production: 1862–1864<br>Type of the Painting Color: Oil<br>Dimensions: 65.4 cm × 90.2 cm<br>Location: Metropolitan Museum of Art<br>Artist: Honoré Daumier<br>Price: $40,000<br>Genre: Realism"
+        break;
+
+      case "The Starry Night":
+        artsrc = "Resources/starry.jpg";
+        description = "Date of Production: June 1889<br>Type of the Painting Color: Oil<br>Dimensions: 74 cm x 92 cm<br>Location: Museum of Modern Art<br>Artist: Vincent van Gogh<br>Price: $150 M<br>Genre: Landscape"
+        break;
+      case "Guernica":
+        artsrc = "Resources/guer.jpg";
+        description = "Date of Production: April 26, 1937–June 1937<br>Type of the Painting Color: Oil<br>Dimensions: 3.49 m x 7.77 m<br>Location: Museo Nacional Centro de Arte Reina Sofía<br>Artist: Pablo Picasso<br>Price: $179 M<br>Genre: Abstract"
+        break;
+    }
+
+    switch (name){
+      case "Raphael Sanzio da Urbino":
+        artsrc = "Resources/raph.jpg";
+        description = "Artist: Raphael Sanzio da Urbino<br> Date of birth: 1483<br> deathof the artist: 1520<br> Place of his/her living: Urbino, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Renaissance<br> Famous of his/her piece of works: \"The School of Athens\", \"The Sistine Madonna\", \"The Marriage of the Virgin\"";
+        break;
+      case "Leonardo di ser Piero da Vinci":
+        artsrc = "Resources/vinci.jpg";
+        description = "Artist: Leonardo di ser Piero da Vinci<br> Date of birth: 1452<br> Death of the artist: 1519<br> Place of his/her living: Anchiano, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Renaissance<br> Famous of his/her piece of works: \"Mona Lisa\", \"The Last Supper\", \"St. John the Baptist\"";
+        break;
+      case "Rembrandt Harmenszoon van Rjin":
+        artsrc = "Resources/rembrandt.jpg";
+        description = "Artist: Rembrandt Harmenszoon van Rjin<br> Date of birth: 1606<br> Death of the artist: 1669<br> Place of his/her living: Leiden, Netherlands<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Realism, Post-Impressionism<br> Famous of his/her piece of works: \"The Night Watch\", \"The Return of the Prodigal\", \"The Jewish Bride\"";
+        break;
+
+      case "Pablo Picasso":
+        artsrc = "Resources/picasso.jpg";
+        description = "Artist: Pablo Picasso<br> Date of birth: 1881<br> Death of the artist: 1973<br> Place of his/her living: Malaga, Spain<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Cubism, Surrealism, Expressionism, Post=Post-Impressionism<br> Famous of his/her piece of works: \"Guernica\", \"Les Demoiselles d'Avignon\", \"The Old Guitarist\"";
+        break;
+
+      case "Michelangelo":
+        artsrc = "Resources/angelo.jpg";
+        description = "Artist: Michelangelo di Lodovico Buonarroti Simoni <br> Date of birth: 1475<br> Death of the artist: 1564<br> Place of his/her living: Caprese Michelangelo, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): High Renaissance, Italian Renaissance, Renaissance<br> Famous of his/her piece of works: \"Sistine Chapel ceiling\", \"The Last Judgment\", \"David\"";
+        break;
+
+    }
+    document.getElementById("artImage").src = artsrc;
+    document.getElementById("artDescription").innerHTML = description;
+}
+</script>
+
+</body>
+
+</html>

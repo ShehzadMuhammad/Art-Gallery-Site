@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Art Gallery</title>
 		<link rel="stylesheet" type="text/css" href="assign1.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	  
 	<body>
@@ -18,8 +19,13 @@
 			<a style="text-decoration: none" href="">
 				<button>Blogs</button>
 			</a>
-			<img src="Resources/shopping-cart.svg" width="2%" height="2%">
+			<!--<img src="Resources/shopping-cart.svg" width="2%" height="2%">-->
+			<div style="float:right;">
+				<i class="fa fa-cart-plus" style="font-size:36px"></i>
+			</div>
 		</div>
+		<br>
+		
 
 		<br>
 		<!--Group Table-->
@@ -100,52 +106,52 @@
 				switch (name){
 					case "Mona Lisa":
 						artsrc = "Resources/Monalisa.jpg";
-						description = "Date of Production: 1503–06, perhaps continuing until c. 1517<br>Type of the Painting Color: Oil<br>Dimensions: 65 cm x 90 cm<br>Location: Musée du Louvre, Paris<br>Artist: Leonardo da Vinci<br>Price: $800 M<br>Genre: Portrait"
+						description = "<a href=\"mona-lisa-full.html\">Mona Lisa</a><br>Date of Production: 1503–06, perhaps continuing until c. 1517<br>Type of the Painting Color: Oil<br>Dimensions: 65 cm x 90 cm<br>Location: Musée du Louvre, Paris<br>Artist: Leonardo da Vinci<br>Price: $800 M<br>Genre: Portrait"
 						break;
 
 					case "The Night Watch":
 						artsrc = "Resources/night.jpg";
-						description = "Date of Production: 1642<br>Type of the Painting Color: Oil<br>Dimensions: 363 cm × 437 cm<br>Location: Amsterdam Museum, Paris<br>Artist: Rembrandt van Rijn<br>Price: $23,000<br>Genre: Baroque"
+						description = "<a href=\"night-watch-full.html\">The Night Watch</a><br>Date of Production: 1642<br>Type of the Painting Color: Oil<br>Dimensions: 363 cm × 437 cm<br>Location: Amsterdam Museum, Paris<br>Artist: Rembrandt van Rijn<br>Price: $23,000<br>Genre: Baroque"
 						break;
 
 					case "Third Class Carriage":
 						artsrc = "Resources/thirdclass.jpg";
-						description = "Date of Production: 1862–1864<br>Type of the Painting Color: Oil<br>Dimensions: 65.4 cm × 90.2 cm<br>Location: Metropolitan Museum of Art<br>Artist: Honoré Daumier<br>Price: $40,000<br>Genre: Realism"
+						description = "<a href=\"third-class-full.html\">Third Class Carriage</a><br>Date of Production: 1862–1864<br>Type of the Painting Color: Oil<br>Dimensions: 65.4 cm × 90.2 cm<br>Location: Metropolitan Museum of Art<br>Artist: Honoré Daumier<br>Price: $40,000<br>Genre: Realism"
 						break;
 
 					case "The Starry Night":
 						artsrc = "Resources/starry.jpg";
-						description = "Date of Production: June 1889<br>Type of the Painting Color: Oil<br>Dimensions: 74 cm x 92 cm<br>Location: Museum of Modern Art<br>Artist: Vincent van Gogh<br>Price: $150 M<br>Genre: Landscape"
+						description = "<a href=\"starry-night-full.html\">The Starry Night</a><br>Date of Production: June 1889<br>Type of the Painting Color: Oil<br>Dimensions: 74 cm x 92 cm<br>Location: Museum of Modern Art<br>Artist: Vincent van Gogh<br>Price: $150 M<br>Genre: Landscape"
 						break;
 
 					case "Guernica":
 						artsrc = "Resources/guer.jpg";
-						description = "Date of Production: April 26, 1937–June 1937<br>Type of the Painting Color: Oil<br>Dimensions: 3.49 m x 7.77 m<br>Location: Museo Nacional Centro de Arte Reina Sofía<br>Artist: Pablo Picasso<br>Price: $179 M<br>Genre: Abstract"
+						description = "<a href=\"guernica-full.html\">Guernica</a><br>Date of Production: April 26, 1937–June 1937<br>Type of the Painting Color: Oil<br>Dimensions: 3.49 m x 7.77 m<br>Location: Museo Nacional Centro de Arte Reina Sofía<br>Artist: Pablo Picasso<br>Price: $179 M<br>Genre: Abstract"
 						break;
 				}
 				/*Artist Switch*/
 				switch (name){
 					case "Raphael Sanzio da Urbino":
 						artsrc = "Resources/raph.jpg";
-						description = "Artist: Raphael Sanzio da Urbino<br> Date of birth: 1483<br> deathof the artist: 1520<br> Place of his/her living: Urbino, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Renaissance<br> Famous of his/her piece of works: \"The School of Athens\", \"The Sistine Madonna\", \"The Marriage of the Virgin\"";
+						description = "<a href=\"raphael-full.html\">Raphael Sanzio da Urbino</a><br>Artist: Raphael Sanzio da Urbino<br> Date of birth: 1483<br> deathof the artist: 1520<br> Place of his/her living: Urbino, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Renaissance<br> Famous of his/her piece of works: \"The School of Athens\", \"The Sistine Madonna\", \"The Marriage of the Virgin\"";
 						break;
 					case "Leonardo di ser Piero da Vinci":
 						artsrc = "Resources/vinci.jpg";
-						description = "Artist: Leonardo di ser Piero da Vinci<br> Date of birth: 1452<br> Death of the artist: 1519<br> Place of his/her living: Anchiano, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Renaissance<br> Famous of his/her piece of works: \"Mona Lisa\", \"The Last Supper\", \"St. John the Baptist\"";
+						description = "<a href=\"leonardo-full.html\">Leonardo di ser Piero da Vinci</a><br>Artist: Leonardo di ser Piero da Vinci<br> Date of birth: 1452<br> Death of the artist: 1519<br> Place of his/her living: Anchiano, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Renaissance<br> Famous of his/her piece of works: \"Mona Lisa\", \"The Last Supper\", \"St. John the Baptist\"";
 						break;
 					case "Rembrandt Harmenszoon van Rjin":
 						artsrc = "Resources/rembrandt.jpg";
-						description = "Artist: Rembrandt Harmenszoon van Rjin<br> Date of birth: 1606<br> Death of the artist: 1669<br> Place of his/her living: Leiden, Netherlands<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Realism, Post-Impressionism<br> Famous of his/her piece of works: \"The Night Watch\", \"The Return of the Prodigal\", \"The Jewish Bride\"";
+						description = "<a href=\"rembrandt-full.html\">Rembrandt Harmenszoon van Rjin</a><br>Artist: Rembrandt Harmenszoon van Rjin<br> Date of birth: 1606<br> Death of the artist: 1669<br> Place of his/her living: Leiden, Netherlands<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Realism, Post-Impressionism<br> Famous of his/her piece of works: \"The Night Watch\", \"The Return of the Prodigal\", \"The Jewish Bride\"";
 						break;
 
 					case "Pablo Picasso":
 						artsrc = "Resources/picasso.jpg";
-						description = "Artist: Pablo Picasso<br> Date of birth: 1881<br> Death of the artist: 1973<br> Place of his/her living: Malaga, Spain<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Cubism, Surrealism, Expressionism, Post=Post-Impressionism<br> Famous of his/her piece of works: \"Guernica\", \"Les Demoiselles d'Avignon\", \"The Old Guitarist\"";
+						description = "<a href=\"picasso-full.html\">Pablo Picasso</a><br>Artist: Pablo Picasso<br> Date of birth: 1881<br> Death of the artist: 1973<br> Place of his/her living: Malaga, Spain<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Cubism, Surrealism, Expressionism, Post=Post-Impressionism<br> Famous of his/her piece of works: \"Guernica\", \"Les Demoiselles d'Avignon\", \"The Old Guitarist\"";
 						break;
 
 					case "Michelangelo":
 						artsrc = "Resources/angelo.jpg";
-						description = "Artist: Michelangelo di Lodovico Buonarroti Simoni <br> Date of birth: 1475<br> Death of the artist: 1564<br> Place of his/her living: Caprese Michelangelo, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): High Renaissance, Italian Renaissance, Renaissance<br> Famous of his/her piece of works: \"Sistine Chapel ceiling\", \"The Last Judgment\", \"David\"";
+						description = "<a href=\"michelangelo-full.html\">Michelangelo</a><br>Artist: Michelangelo di Lodovico Buonarroti Simoni <br> Date of birth: 1475<br> Death of the artist: 1564<br> Place of his/her living: Caprese Michelangelo, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): High Renaissance, Italian Renaissance, Renaissance<br> Famous of his/her piece of works: \"Sistine Chapel ceiling\", \"The Last Judgment\", \"David\"";
 						break;
 
 				}
@@ -175,7 +181,10 @@
 				document.getElementById("artImage").src = artsrc;
 				document.getElementById("artDescription").innerHTML = description;
 			}
+
+
 		</script>
+
 
 	</body>
 

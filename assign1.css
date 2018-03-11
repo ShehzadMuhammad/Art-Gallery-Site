@@ -93,13 +93,25 @@
 
 #ArtSection {
 	//overflow: hidden;
-	text-align: left;
+	text-align: right;
+  vertical-align: right;
 	margin: auto;
 	// padding: 0px;
 	border:0;
 	max-width:100%;
 	border-style:solid;
 	display:flex;
+}
+
+#ArtSection2 {
+  //overflow: hidden;
+  text-align: left;
+  margin: auto;
+  // padding: 0px;
+  border:0;
+  max-width:100%;
+  border-style:solid;
+  display:flex;
 }
 
 #image {
@@ -123,4 +135,5 @@
 }
 
 #artImage {
+
 }

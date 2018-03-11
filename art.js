@@ -2,7 +2,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/Monalisa.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt1()'> Mona Lisa</span> </br> Date of Production: 1503–06 <br>Price: $800 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt1()'> Mona Lisa</span> </br> Description:  is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci<br>Price: $800 M";
 	}
 
 	function showArt1() {
@@ -16,7 +16,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/night.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt2()'>The Night Watch</span> </br> Description: 1503–06 <br>Price: $23,000";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt2()'>The Night Watch</span> </br> Description: is a 1642 painting by Rembrandt van Rijn. It is in the collection of the Amsterdam Museum but is prominently displayed in the Rijksmuseum as the best known painting in its collection.  <br>Price: $23,000";
 	}
 
 	function showArt2() {
@@ -30,7 +30,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/thirdclass.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt3()'>Third Class Carriage</span> </br> Date of Production: 1503–06 <br>Price: $40,000";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt3()'>Third Class Carriage</span> </br> Description: The Third-Class Carriage is a c. 1862–1864 oil on canvas painting by Honoré Daumier, in the collection of the Metropolitan Museum of Art.  <br>Price: $40,000";
 	}
 
 	function showArt3() {
@@ -44,7 +44,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/starry.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt4()'> The Starry Night</span> </br>General Description: June 1889 <br> Price: $150 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt4()'> The Starry Night</span> </br>Description: The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence <br> Price: $150 M";
 	}
 
 	function showArt4() {
@@ -58,7 +58,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/guer.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt5()'> Guernica</span> </br> Date of Production: 1503–06 <br>Price: $179 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArt5()'> Guernica</span> </br> Description: Guernica is a mural-sized oil painting on canvas by Spanish artist Pablo Picasso completed in June 1937 <br>Price: $179 M";
 	}
 
 	function showArt5() {
@@ -73,7 +73,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/raph.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist1()'> Raphael Sanzio da Urbino</span> </br> Date of Production: 1503–06 <br>Price: $800 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist1()'> Raphael Sanzio da Urbino</span> </br> Description: Raffaello Sanzio da Urbino, known as Raphael, was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.";
 	}
 
 	function showArtist1() {
@@ -87,7 +87,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src = "Resources/vinci.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist2()'> Leonardo di ser Piero da Vinci</span> </br> Date of Production: 1503–06 <br>Price: $800 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist2()'> Leonardo di ser Piero da Vinci</span> </br> Description: Leonardo di ser Piero da Vinci, more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture.";
 	}
 
 	function showArtist2() {
@@ -101,7 +101,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src =  "Resources/rembrandt.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist3()'> Rembrandt Harmenszoon van Rjin</span> </br> Date of Production: 1503–06 <br>Price: $800 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist3()'> Rembrandt Harmenszoon van Rjin</span> </br> Description:  was a Dutch draughtsman, painter, and printmaker. An innovative and prolific master in three media,[3] he is generally considered one of the greatest visual artists in the history of art and the most important in Dutch art history.";
 	}
 
 	function showArtist3() {
@@ -115,7 +115,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src =  "Resources/picasso.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist4()'> Pablo Picasso</span> </br> Date of Production: 1503–06 <br>Price: $800 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist4()'> Pablo Picasso</span> </br> Description: Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France.";
 	}
 
 	function showArtist4() {
@@ -129,7 +129,7 @@
 		document.getElementById("ArtSection").style.visibility = "visible";
 		document.getElementById("ArtSection2").style.visibility = "hidden";
 		document.getElementById("artImage").src =  "Resources/angelo.jpg";
-		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist5()'> Michelangelo</span> </br> Date of Production: 1503–06 <br>Price: $800 M";
+		document.getElementById("artDescription").innerHTML = "Name: <span onClick='showArtist5()'> Michelangelo</span> </br> Description: was an Italian sculptor, painter, architect and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art";
 	}
 
 	function showArtist5() {

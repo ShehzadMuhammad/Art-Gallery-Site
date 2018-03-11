@@ -6,6 +6,12 @@
 		<title>Art Gallery</title>
 		<link rel="stylesheet" type="text/css" href="assign1.css">
     <script src="art.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	</head>
 	  
 	<body>
@@ -95,6 +101,47 @@
       </div>
       <div id="info">
         <p id="artDescription2"></p>
+                                      <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+              Painting:
+              <select name="paintings">
+                <option value="starryNight">Starry Night</option>
+                <option value="laGrenouillere">La Grenouillère</option>
+                <option value="theLastSupper">The Last Supper</option>
+                <option value="american Gothic">American Gothic</option>
+                <option value="theSonOfMan">The Son of Man</option>
+              </select>
+              <br />
+              <br />
+              Quantity: <input type="number" name="quantity" min="1" max="5">
+              <br />
+              Shipping Plan: <br/>
+              <input type="radio" name="shippingPlan" value="standard" checked>Standard (2-3 weeks): $4.99 <br/>
+              <input type="radio" name="shippingPlan" value="express">Express (2-5 days): $14.99 <br/>
+              <input type="radio" name="shippingPlan" value="nextDay">Next Day: $39.99 <br />
+
+        <input type="submit" value="Submit">
+        <input type="reset">
+            </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
 

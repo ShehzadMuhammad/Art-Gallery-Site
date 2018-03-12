@@ -1,0 +1,18 @@
+CPS630 Assignment 2
+Shehzad Muhammad 500592053
+Pietro Andreoli 500639696
+
+
+Technical Report
+
+HTML
+The HTML elements are continued from Assignment 1, where we have the dropdown button the 3, home about us and shopping cart header list and we also use div containers for the two windows of our items, the window for the image and the window for the information. Modal from bootstrap was used for the shopping cart order to provide a popup dialog box for user input and then we used a form to record that information.
+CSS
+Same as elements continued from Assignment 1, used for formatting and spacing of objects and also used for the buttons.
+Javascript
+Javascript functions are used when click on each item in the dropdown list to choose the artwork or artist and it works with the DOM to display that information.
+JQuery
+No JQuery was used
+DOM
+The DOM is used with javascript to display the information where each item in our dropdown list is attached to a javascript onClick function that uses the DOM to display information in the winodws.
+

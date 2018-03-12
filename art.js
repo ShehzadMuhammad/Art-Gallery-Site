@@ -34,17 +34,17 @@ function setPurchase(){
 		details["shipping"] = 39.99;
 	}
 	
-<<<<<<< HEAD
 	purchasedArt.push(details);
 	console.log(details);
 	//return true;
 }
 function calcInvoice(){
-	total = 0;
-
+	var total = 0;
+	
 	if(purchasedArt.length > 0){
+		console.log(purchasedArt);
 		for(var i = 0; i < purchasedArt.length; i++){
-			console.log(purchasedArt[i]);
+			
 			total += (purchasedArt[i]["quantity"] * purchasedArt[i]["price"]) + purchasedArt[i]["shipping"];
 		}
 	}
@@ -217,7 +217,7 @@ function smallData(name) {
 	var artsrc = "";
 	var description = "";
 	/*Artist Switch*/
-
+}
 function showData(name) {
 				document.getElementById("ArtSection").style.visibility = "visible";
 				var artsrc = "";
@@ -232,7 +232,7 @@ function showData(name) {
 						break;
 					case "Metropolitan Museum of Art":
 						artsrc = "Resources/met-museum.jpg";
-						description = "Description: The Metropolitan Museum of Art of New York, colloquially "the Met", is the largest art museum in the United States.";
+						description = "Description: The Metropolitan Museum of Art of New York, colloquially 'the Met', is the largest art museum in the United States.";
 						break;
 					case "Hermitage Museum":
 						artsrc = "Resources/hermitage.jpg";
@@ -248,8 +248,8 @@ function showData(name) {
 						break;
 				}
 				document.getElementById("artImage").src = artsrc;
-				document.getElementById("artDescription").innerHTML = description;
+				document.getElementById("info").innerHTML = description;
 			}
 
-}
+
 

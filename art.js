@@ -142,7 +142,7 @@
 
 
 	
-	function smallData(name) {
+	function showData(name) {
 				document.getElementById("ArtSection").style.visibility = "visible";
 				var artsrc = "";
 				var description = "";
@@ -152,27 +152,28 @@
 				switch (name){
 					case "The Louvre":
 						artsrc = "Resources/Louvre.jpg";
-						description = "Description";
+						description = "Description: The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l'Auxerrois.";
 						break;
 					case "Metropolitan Museum of Art":
 						artsrc = "Resources/met-museum.jpg";
-						description = "Description";
+						description = "Description: The Metropolitan Museum of Art of New York, colloquially "the Met", is the largest art museum in the United States.";
 						break;
 					case "Hermitage Museum":
 						artsrc = "Resources/hermitage.jpg";
-						description = "Description";
+						description = "Description: The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia. The second largest in the world,";
 						break;
 					case "British Museum":
 						artsrc = "Resources/british.jpg";
-						description = "Description";
+						description = "Description: The British Museum, located in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture.";
 						break;
 					case "Art Institute of Chicago":
 						artsrc = "Resources/chicago.jpg";
-						description = "Description";
+						description = "Description: The Art Institute of Chicago, founded in 1879 and located in Chicago's Grant Park, is one of the oldest and largest art museums in the United States";
 						break;
 				}
 				document.getElementById("artImage").src = artsrc;
 				document.getElementById("artDescription").innerHTML = description;
 			}
 
+}
 	

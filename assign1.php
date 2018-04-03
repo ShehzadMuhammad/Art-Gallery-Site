@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!--http://www.scs.ryerson.ca/~p2andreo/CPS630/Assignment/CPS630/assign1.php-->
 
 	<head>
 		<meta charset="UTF-8">
@@ -15,6 +16,19 @@
 	</head>
 	  
 	<body>
+		<?php
+		//include 'Database.php';
+		require('Database.php');
+		$servername = "localhost";
+		$username = "p2andreo";
+		$password = "Ciwowrav";
+		$dbname = "p2andreo";
+		$thisDb = new Database($servername, $username, $password, $dbname);
+
+
+		$create_table_artworks = "
+			";
+	?>
 		<div>
 			<a style="text-decoration: none" href="">
 				<button>Home</button>

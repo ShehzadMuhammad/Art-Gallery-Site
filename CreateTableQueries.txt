@@ -31,10 +31,44 @@ INSERT INTO images(imagePath, size) VALUES ('Resources/hermitage.jpg', 'L');
 INSERT INTO images(imagePath, size) VALUES ('Resources/british.jpg', 'L');
 INSERT INTO images(imagePath, size) VALUES ('Resources/chicago.jpg', 'L');
 CREATE TABLE museums(museumID INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(60) NOT NULL, imagePath VARCHAR(100) NOT NULL, description VARCHAR(300));
+
 INSERT INTO museums(name, imagePath, description) VALUES ('The Louvre', 'Resources/Louvre.jpg', ' The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l\'Auxerrois.');
+
+INSERT INTO museums(name, imagePath, description) VALUES ('Metropolitan Museum of Art', 'Resources/met-museum.jpg', 'The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia. The second largest in the world.');
+
+INSERT INTO museums(name, imagePath, description) VALUES ('British Museum', 'Resources/british.jpg', ' The British Museum, located in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture.');
+
+INSERT INTO museums(name, imagePath, description) VALUES ('Art Institute of Chicago', 'Resources/chicago.jpg', 'The Art Institute of Chicago, founded in 1879 and located in Chicago Grant Park, is one of the oldest and largest art museums in the United States.');
+
+
+
 CREATE TABLE genres(name VARCHAR(50) PRIMARY KEY);
 
-CREATE TABLE subjects(name VARCHAR(50) PRIMARY KEY);
+INSERT INTO genres(name) VALUES ('Portrait');
+INSERT INTO genres(name) VALUES ('Baroque');
+INSERT INTO genres(name) VALUES ('Realism');
+INSERT INTO genres(name) VALUES ('Landscape');
+INSERT INTO genres(name) VALUES ('Abstract');
+INSERT INTO genres(name) VALUES ('Gothic');
+INSERT INTO genres(name) VALUES ('Renaissance');
+INSERT INTO genres(name) VALUES ('Pre-Modern');
+INSERT INTO genres(name) VALUES ('Modern');
+INSERT INTO genres(name) VALUES ('Post-Impressionism');
+INSERT INTO genres(name) VALUES ('Cubism');
+INSERT INTO genres(name) VALUES ('Surrealism');
+INSERT INTO genres(name) VALUES ('Expressionism');
+INSERT INTO genres(name) VALUES ('High-Renaissance');
+INSERT INTO genres(name) VALUES ('Italian-Renaissance');
+
+
+CREATE TABLE subjects(name VARCHAR(200) PRIMARY KEY);
+INSERT INTO subjects(name) VALUES  ('A portrait of Lisa del Giocondo');
+INSERT INTO subjects(name) VALUES (' it is a group portrait of a militia company');
+INSERT INTO subjects(name) VALUES (' it depicts the view from the east-facing window of his asylum room at Saint Remy de Provence, just before sunrise, with the addition of an idealized village.');
+INSERT INTO subjects(name) VALUES ('  the large mural shows the suffering of people wrenched by violence and chaos. Prominent in the composition are a gored horse, a bull, and flames.');
+INSERT INTO subjects(name) VALUES (' The Third-Class Carriage demonstrates Daumier's renowned sympathy for the poor.');
+
+
 
 CREATE TABLE shoppingcart(userID INTEGER AUTO_INCREMENT PRIMARY KEY, shippingPlan VARCHAR(30), invoice INTEGER DEFAULT 0);
 

@@ -3,19 +3,21 @@
 	class Database{
 
 
-		function __construct() { 
-			$a = func_get_args(); 
+		function __construct($connection) { 
+			/*$a = func_get_args(); 
 			$i = func_num_args(); 
 			if (method_exists($this,$f='__construct'.$i)) { 
 				call_user_func_array(array($this,$f),$a); 
-			} 
+			} */
+
+			$this->connection = $connection;
 		} 
 
 		function __construct1($connection){ 
 			$this->connection = $connection;
 		} 
 
-		function __construct2($servername, $username, $password, $dbname) { 
+		function __construct4($servername, $username, $password, $dbname) { 
 			try{
 				$this->connection = new mysqli($servername, $username, $password, $dbname);
 				if ($conn->connect_error) {
@@ -32,7 +34,8 @@
 		}
 		 
 		function fetchArtData($artId){
-		/*	$query = 'SELECT * FROM artworks WHERE artId=' . $artId;
+			echo "test";
+			$query = 'SELECT * FROM artworks WHERE artId=' . $artId;
 			$name = '';
 			$imagePath = '';
 			$description = '';
@@ -43,25 +46,28 @@
 
 			try{
 				if ($result->num_rows == 1) {
-					$row = $result->fetch_assoc()
-					$name = $row["name"];
-					$imagePath = $row["imagePath"];
-					$description = $row["description"];
-					$artistId = $row["artistId"];
-					$price = $row["price"];
+					while($row = $result->fetch_assoc()) {
+						$name = $row["name"];
+						$imagePath = $row["imagePath"];
+						$description = $row["description"];
+						$artistId = $row["artistId"];
+						$price = $row["price"];
+					}
 				} else {
 				    echo "0 results";
 				}
 			}catch(Exception $e){
-			    echo $e->errorMessage();
+			    echo "NOPE";
 			}
+			
 			$output['name'] = $name;
 			$output['imagePath'] = $imagePath;
+			$output['imagePath'] = "Resources/Monalisa.jpg";
 			$output['description'] = $description;
 			$output['artistId'] = $artistId;
 			$output['price'] = $price;
 			return $output;
-*/
+
 		}
 		
 	}

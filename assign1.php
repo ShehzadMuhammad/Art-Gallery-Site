@@ -16,6 +16,28 @@
 	</head>
 	  
 	<body>
+		<?php
+			//include 'Database.php';
+			require('Database.php');
+			$servername = "localhost";
+			$username = "p2andreo";
+			$password = "Ciwowrav";
+			$dbname = "p2andreo";
+			$connection = new mysqli($servername, $username, $password, $dbname);
+			if ($conn->connect_error) {
+    				die("Connection failed: " . $conn->connect_error);
+
+			}
+
+			/*$result = $connection->query("select * from artists");
+			while($row = $result->fetch_assoc()) {
+        		echo $row['artistId'];
+    		}*/
+			//$thisDb = new Database($servername, $username, $password, $dbname);
+				$thisDb = new Database($connection);
+
+
+		?>
 		<script>
 				var selectedArt = "";
 				var purchasedArt = [];
@@ -82,9 +104,10 @@
 					document.getElementById('selectedPaintingName').innerHTML = selectedArt;
 				}
 				function artwork1() {
+					<?php //$result = $thisDb->fetchArtData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/Monalisa.jpg";
+					document.getElementById("artImage").src = <?php //echo "\"$result['imagePath']\"";?>;
 					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt1()'> Mona Lisa</span></a> </br> Description:  is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci<br>Price: $800 M";
 				}
 
@@ -274,17 +297,7 @@
 
 
 			</script>
-		<?php
-		//include 'Database.php';
-		require('Database.php');
-		$servername = "localhost";
-		$username = "p2andreo";
-		$password = "Ciwowrav";
-		$dbname = "p2andreo";
-		$thisDb = new Database($servername, $username, $password, $dbname);
-
-
-	?>
+		
 		<div>
 			<a style="text-decoration: none" href="">
 				<button>Home</button>

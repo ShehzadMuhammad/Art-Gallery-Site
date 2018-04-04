@@ -31,15 +31,15 @@ INSERT INTO images(imagePath, size) VALUES ('Resources/met-museum.jpg', 'L');
 INSERT INTO images(imagePath, size) VALUES ('Resources/hermitage.jpg', 'L');
 INSERT INTO images(imagePath, size) VALUES ('Resources/british.jpg', 'L');
 INSERT INTO images(imagePath, size) VALUES ('Resources/chicago.jpg', 'L');
-CREATE TABLE museums(museumID INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(60) NOT NULL, imagePath VARCHAR(100) NOT NULL, description VARCHAR(300));
+CREATE TABLE museums(museumID INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(60) NOT NULL, imagePath VARCHAR(100) NOT NULL, shortDescription VARCHAR(300), longDescription VARCHAR(300));
 
-INSERT INTO museums(name, imagePath, description) VALUES ('The Louvre', 'Resources/Louvre.jpg', ' The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l\'Auxerrois.');
+INSERT INTO museums(name, imagePath, shortDescription, longDescription) VALUES ('The Louvre', 'Resources/Louvre.jpg', ' The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l\'Auxerrois.', 'Date Established: August 10, 1793<br> Address: Rue de Rivoli, 75001 Paris, France<br> People Behind it: Pierre Lescot, Hector Lefuel, Louis Visconti, Louis Le Vau<br> Famous of artoworks: \"Mona Lisa\", \"Venus de Milo\", \"Code of Hammurabi\"');
 
-INSERT INTO museums(name, imagePath, description) VALUES ('Metropolitan Museum of Art', 'Resources/met-museum.jpg', 'The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia. The second largest in the world.');
+INSERT INTO museums(name, imagePath, shortDescription, longDescription) VALUES ('Metropolitan Museum of Art', 'Resources/met-museum.jpg', 'The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia. The second largest in the world.', 'Date Established: February 20, 1872<br> Address: 1000 5th Ave, New York, NY 10028, USA<br> People Behind it: Richard Morris Hunt, Calvert Vaux, Jacob Wrey Mould<br> Famous of artoworks: \"Portrait of Madame X\", \"Madonna and Child\", \"The Oxbow\"');
 
-INSERT INTO museums(name, imagePath, description) VALUES ('British Museum', 'Resources/british.jpg', ' The British Museum, located in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture.');
+INSERT INTO museums(name, imagePath, shortDescription, longDescription) VALUES ('British Museum', 'Resources/british.jpg', ' The British Museum, located in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture.', 'Date Established: February 20, 1872<br> Address: Great Russell St, Bloomsbury, London WC1B 3DG, UK<br> People Behind it: Robert Smirke, Sydney Smirk, John Russel Pope<br> Famous of artoworks: \"Rosetta Stone\", \"Study for Adam\", \"Dancers Practising at the Barre\"');
 
-INSERT INTO museums(name, imagePath, description) VALUES ('Art Institute of Chicago', 'Resources/chicago.jpg', 'The Art Institute of Chicago, founded in 1879 and located in Chicago Grant Park, is one of the oldest and largest art museums in the United States.');
+INSERT INTO museums(name, imagePath, shortDescription, longDescription) VALUES ('Art Institute of Chicago', 'Resources/chicago.jpg', 'The Art Institute of Chicago, founded in 1879 and located in Chicago Grant Park, is one of the oldest and largest art museums in the United States.', 'Date Established: 18792<br> Address: 111 S Michigan Ave, Chicago, IL 60603, USA<br> People Behind it: Bill Bogan, Cedric Diggory, Harry Potter<br> Famous of artoworks: \"American Gothic\", \"Nighthawks\", \"The Old Guitarist\"');
 
 
 

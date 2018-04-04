@@ -33,6 +33,44 @@
 			}
 		}
 		 
+		function fetchArtistData($id){
+			$query = 'SELECT * FROM artists WHERE artistId=' . $id;
+			$result = $this->connection->query($query);
+			try{
+				if ($result->num_rows == 1) {
+					while($row = $result->fetch_assoc()) {
+						return $row;
+					
+					}
+				} else {
+				    echo "0 results";
+				}
+			}catch(Exception $e){
+			    echo "NOPE";
+			}
+			
+
+		
+		}
+		function fetchMuseumData($id){
+			$query = 'SELECT * FROM meusems WHERE museumID=' . $id;
+			$result = $this->connection->query($query);
+			try{
+				if ($result->num_rows == 1) {
+					while($row = $result->fetch_assoc()) {
+						return $row;
+					
+					}
+				} else {
+				    echo "0 results";
+				}
+			}catch(Exception $e){
+			    echo "NOPE";
+			}
+			
+
+		
+		}
 		function fetchArtData($artId){
 			$query = 'SELECT * FROM artworks WHERE artId=' . $artId;
 			$result = $this->connection->query($query);

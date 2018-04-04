@@ -192,116 +192,145 @@
 
 
 					function artist1() {
+					<?php $result = $thisDb->fetchArtData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/raph.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'> Raphael Sanzio da Urbino</span></a> </br> Description: Raffaello Sanzio da Urbino, known as Raphael, was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 
 				function showArtist1() {
+					<?php $result = $thisDb->fetchArtData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/raph.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of birth: 1483<br> deathof the artist: 1520<br> Place of his/her living: Urbino, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Renaissance<br> Famous of his/her piece of works: \"The School of Athens\", \"The Sistine Madonna\", \"The Marriage of the Virgin\"";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["facts"];?>";
 				}
 
 				function artist2() {
+					<?php $result = $thisDb->fetchArtData(2); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/vinci.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist2()'> Leonardo di ser Piero da Vinci</span></a> </br> Description: Leonardo di ser Piero da Vinci, more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture.";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 
 				function showArtist2() {
+					<?php $result = $thisDb->fetchArtData(2); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/vinci.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of birth: 1452<br> Death of the artist: 1519<br> Place of his/her living: Anchiano, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Renaissance<br> Famous of his/her piece of works: \"Mona Lisa\", \"The Last Supper\", \"St. John the Baptist\"";
-				}
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["facts"];?>";
 
 				function artist3() {
+					<?php $result = $thisDb->fetchArtData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src =  "Resources/rembrandt.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist3()'> Rembrandt Harmenszoon van Rjin</span></a> </br> Description:  was a Dutch draughtsman, painter, and printmaker. An innovative and prolific master in three media,[3] he is generally considered one of the greatest visual artists in the history of art and the most important in Dutch art history.";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 
 				function showArtist3() {
+					<?php $result = $thisDb->fetchArtData(3); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/rembrandt.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of birth: 1606<br> Death of the artist: 1669<br> Place of his/her living: Leiden, Netherlands<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Baroque, Realism, Post-Impressionism<br> Famous of his/her piece of works: \"The Night Watch\", \"The Return of the Prodigal\", \"The Jewish Bride\"";
-				}
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["facts"];?>";
 
 				function artist4() {
+					<?php $result = $thisDb->fetchArtData(4); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src =  "Resources/picasso.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist4()'> Pablo Picasso</span></a> </br> Description: Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France.";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 
 				function showArtist4() {
+					<?php $result = $thisDb->fetchArtData(4); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/picasso.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of birth: 1881<br> Death of the artist: 1973<br> Place of his/her living: Malaga, Spain<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): Cubism, Surrealism, Expressionism, Post=Post-Impressionism<br> Famous of his/her piece of works: \"Guernica\", \"Les Demoiselles d'Avignon\", \"The Old Guitarist\"";
-				}
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["facts"];?>";
 
-				function artist5() {
+				function artist1() {
+					<?php $result = $thisDb->fetchArtData(5); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src =  "Resources/angelo.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist5()'> Michelangelo</span></a> </br> Description: was an Italian sculptor, painter, architect and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 
-				function showArtist5() {
+				function showArtist1() {
+					<?php $result = $thisDb->fetchArtData(5); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/angelo.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of birth: 1475<br> Death of the artist: 1564<br> Place of his/her living: Caprese Michelangelo, Italy<br> Genres of his/her paintings(e.g. Gothic, Renaissance, Baroque, Pre-Modern, and Modern): High Renaissance, Italian Renaissance, Renaissance<br> Famous of his/her piece of works: \"Sistine Chapel ceiling\", \"The Last Judgment\", \"David\"";
-				}
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["facts"];?>";
 
 
 
-
-				function smallData(name) {
+				function museum1() {
+					<?php $result = $thisDb->fetchMuseumData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
-					var artsrc = "";
-					var description = "";
-					/*Artist Switch*/
+					document.getElementById("ArtSection2").style.visibility = "hidden";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
 				}
-				function showData(name) {
-								document.getElementById("ArtSection").style.visibility = "visible";
-								var artsrc = "";
-								var description = "";
-								/*Artist Switch*/
-								
-								/*Museum Switch*/
-								switch (name){
-									case "The Louvre":
-										artsrc = "Resources/Louvre.jpg";
-										description = "Description: The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l'Auxerrois.";
-										break;
-									case "Metropolitan Museum of Art":
-										artsrc = "Resources/met-museum.jpg";
-										description = "Description: The Metropolitan Museum of Art of New York, colloquially 'the Met', is the largest art museum in the United States.";
-										break;
-									case "Hermitage Museum":
-										artsrc = "Resources/hermitage.jpg";
-										description = "Description: The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia. The second largest in the world,";
-										break;
-									case "British Museum":
-										artsrc = "Resources/british.jpg";
-										description = "Description: The British Museum, located in the Bloomsbury area of London, United Kingdom, is a public institution dedicated to human history, art and culture.";
-										break;
-									case "Art Institute of Chicago":
-										artsrc = "Resources/chicago.jpg";
-										description = "Description: The Art Institute of Chicago, founded in 1879 and located in Chicago's Grant Park, is one of the oldest and largest art museums in the United States";
-										break;
-								}
-								document.getElementById("artImage").src = artsrc;
-								document.getElementById("info").innerHTML = description;
-							}
+
+				function showMuseum1() {
+					<?php $result = $thisDb->fetchArtData(1); ?>
+					document.getElementById("ArtSection").style.visibility = "hidden";
+					document.getElementById("ArtSection2").style.visibility = "visible";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
+
+					function museum2() {
+					<?php $result = $thisDb->fetchArtData(2); ?>
+					document.getElementById("ArtSection").style.visibility = "visible";
+					document.getElementById("ArtSection2").style.visibility = "hidden";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+				}
+
+				function showMuseum2() {
+					<?php $result = $thisDb->fetchArtData(2); ?>
+					document.getElementById("ArtSection").style.visibility = "hidden";
+					document.getElementById("ArtSection2").style.visibility = "visible";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
+
+				function museum3() {
+					<?php $result = $thisDb->fetchArtData(3); ?>
+					document.getElementById("ArtSection").style.visibility = "visible";
+					document.getElementById("ArtSection2").style.visibility = "hidden";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+				}
+
+				function showMuseum3() {
+					<?php $result = $thisDb->fetchArtData(3); ?>
+					document.getElementById("ArtSection").style.visibility = "hidden";
+					document.getElementById("ArtSection2").style.visibility = "visible";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
+
+
+				function museum4() {
+					<?php $result = $thisDb->fetchArtData(4); ?>
+					document.getElementById("ArtSection").style.visibility = "visible";
+					document.getElementById("ArtSection2").style.visibility = "hidden";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+				}
+
+				function showMuseum4() {
+					<?php $result = $thisDb->fetchArtData(4); ?>
+					document.getElementById("ArtSection").style.visibility = "hidden";
+					document.getElementById("ArtSection2").style.visibility = "visible";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
+
+
 
 
 
@@ -370,11 +399,11 @@
 		<div class="drop2">
 			<button class="btn2">Museum</button>
 			<div class="drop2-content">
-				<a href="#" onclick="showData('The Louvre')">The Louvre</a>
-				<a href="#" onclick="showData('Metropolitan Museum of Art')">Metropolitan Museum of Art</a>
-				<a href="#" onclick="showData('Hermitage Museum')">Hermitage Museum</a>
-				<a href="#" onclick="showData('British Museum')">British Museum</a>
-				<a href="#" onclick="showData('Art Institute of Chicago')">Art Institute of Chicago</a>
+				<a href="#" onclick="museum1()">The Louvre</a>
+				<a href="#" onclick="museum2()">Metropolitan Museum of Art</a>
+				<a href="#" onclick="museum3()">Hermitage Museum</a>
+				<a href="#" onclick="museum4()">British Museum</a>
+				<a href="#" onclick="museum5()">Art Institute of Chicago</a>
 			</div>
 		</div>
 		<br>

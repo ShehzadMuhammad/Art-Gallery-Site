@@ -35,14 +35,7 @@
 		 
 		function fetchArtData($artId){
 			$query = 'SELECT * FROM artworks WHERE artId=' . $artId;
-			$name = '';
-			$imagePath = '';
-			$description = '';
-			$artistId = -1;
-			$price = 0;
-			$output = array();
 			$result = $this->connection->query($query);
-
 			try{
 				if ($result->num_rows == 1) {
 					while($row = $result->fetch_assoc()) {

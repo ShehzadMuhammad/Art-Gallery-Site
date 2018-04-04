@@ -47,13 +47,7 @@
 				if ($result->num_rows == 1) {
 					while($row = $result->fetch_assoc()) {
 						return $row;
-						$name = $row["name"];
-
-						$imagePath = $row["imagePath"];
-
-						$description = $row["description"];
-						$artistId = $row["artistId"];
-						$price = $row["price"];
+					
 					}
 				} else {
 				    echo "0 results";
@@ -62,13 +56,6 @@
 			    echo "NOPE";
 			}
 			
-			$output['name'] = $name;
-			$output['imagePath'] = $imagePath;
-			$output['description'] = $description;
-			$output['artistId'] = $artistId;
-			$output['price'] = $price;
-
-			return $output;
 
 		}
 		

@@ -1,20 +1,36 @@
-CREATE TABLE artists(artistId UNSIGNED INTEGER PRIMARY KEY, name VARCHAR(30) NOT NULL, information VARCHAR(500));
+CREATE TABLE artists(artistId INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL, information VARCHAR(500));
 
-CREATE TABLE artworks(artId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL, imagePath VARCHAR(100) NOT NULL, description VARCHAR(500), artist VARCHAR(30) NOT NULL, price DECIMAL(15,2) NOT NULL);
+INSERT INTO artists (name, information) VALUES ('Raphael Sanzio da Urbino', 'Raffaello Sanzio da Urbino, known as Raphael, was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.');
+INSERT INTO artists (name, information) VALUES ('Leonardo di ser Piero da Vinci', 'Leonardo di ser Piero da Vinci, more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture.');
+INSERT INTO artists (name, information) VALUES ('Rembrandt Harmenszoon van Rjin', 'was a Dutch draughtsman, painter, and printmaker. An innovative and prolific master in three media,[3] he is generally considered one of the greatest visual artists in the history of art and the most important in Dutch art history.');
+INSERT INTO artists (name, information) VALUES ('Pablo Picasso', 'Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France.');
+INSERT INTO artists (name, information) VALUES ('Michelangelo', 'was an Italian sculptor, painter, architect and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art');
+INSERT INTO artists (name) VALUES ('Honore Daumier');
+INSERT INTO artists (name) VALUES ('Vincent van Gogh');
+INSERT INTO artists (name) VALUES ('Guernica');
+-------------------------------------------------------------------------------------------
+CREATE TABLE artworks(artId INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL, imagePath VARCHAR(100) NOT NULL, description VARCHAR(500), artistId INTEGER NOT NULL, price DECIMAL(15,2) NOT NULL, FOREIGN KEY(artistId) REFERENCES artists(artistId));
 
-CREATE TABLE images(imagePath VARCHAR(100) NOT NULL, size INT(6) NOT NULL, artId INT(6) AUTO_INCREMENT PRIMARY KEY);
+INSERT INTO artworks(name, imagePath, description, artistId, price) VALUES ('Mona Lisa', 'Resources/Monalisa.jpg', 'is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci', 2, 800000000);
+INSERT INTO artworks(name, imagePath, description, artistId, price) VALUES ('The Night Watch', 'Resources/night.jpg', 'is a 1642 painting by Rembrandt van Rijn. It is in the collection of the Amsterdam Museum but is prominently displayed in the Rijksmuseum as the best known painting in its collection.', 3, 23000);
+INSERT INTO artworks(name, imagePath, description, artistId, price) VALUES ('Third Class Carriage', 'Resources/thirdclass.jpg', 'The Third-Class Carriage is a c. 1862–1864 oil on canvas painting by Honoré Daumier, in the collection of the Metropolitan Museum of Art.', 6, 40000);
+INSERT INTO artworks(name, imagePath, description, artistId, price) VALUES ('The Starry Night', 'Resources/starry.jpg', 'The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence.', 7, 150000000);
+INSERT INTO artworks(name, imagePath, description, artistId, price) VALUES ('Guernica', 'Resources/guer.jpg', 'Guernica is a mural-sized oil painting on canvas by Spanish artist Pablo Picasso completed in June 1937.', 7, 179000000);
 
-CREATE TABLE museums(museumID UNSIGNED INT(6) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(60) NOT NULL, imagePath VARCHAR(100) NOT NULL, description VARCHAR(500));
+-------------------------------------------------------------------------------------------
+CREATE TABLE images(artId INT(6) AUTO_INCREMENT PRIMARY KEY, imagePath VARCHAR(100), size INT(6) NOT NULL);
 
-CREATE TABLE genres(name VARCHAR(50) NOT NULL);
+CREATE TABLE museums(museumID INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(60) NOT NULL, imagePath VARCHAR(100) NOT NULL, description VARCHAR(300));
 
-CREATE TABLE subjects(name VARCHAR(50) NOT NULL);
+CREATE TABLE genres(name VARCHAR(50) PRIMARY KEY);
 
-CREATE TABLE shoppingcart(userID UNSIGNED INT(6) AUTO_INCREMENT PRIMARY KEY, shippingP VARCHAR(30) NOT NULL);
+CREATE TABLE subjects(name VARCHAR(50) PRIMARY KEY);
 
-CREATE TABLE items(userID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, itemName VARCHAR(30) NOT NULL);
+CREATE TABLE shoppingcart(userID INTEGER AUTO_INCREMENT PRIMARY KEY, shippingPlan VARCHAR(30), invoice INTEGER DEFAULT 0);
 
-CREATE reviews(userID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, description VARCHAR(500) NOT NULL);
+CREATE TABLE items(userID INTEGER AUTO_INCREMENT PRIMARY KEY, itemName VARCHAR(30) NOT NULL, quantity INTEGER DEFAULT 0, price DECIMAL(15, 2) NOT NULL);
+
+CREATE TABLE reviews(userID INTEGER AUTO_INCREMENT PRIMARY KEY, description VARCHAR(500) NOT NULL, artId INTEGER NOT NULL, FOREIGN KEY(artId) REFERENCES artworks(artId));
 
 
 

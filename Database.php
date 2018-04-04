@@ -34,7 +34,6 @@
 		}
 		 
 		function fetchArtData($artId){
-			echo "test";
 			$query = 'SELECT * FROM artworks WHERE artId=' . $artId;
 			$name = '';
 			$imagePath = '';
@@ -47,8 +46,11 @@
 			try{
 				if ($result->num_rows == 1) {
 					while($row = $result->fetch_assoc()) {
+						return $row;
 						$name = $row["name"];
+
 						$imagePath = $row["imagePath"];
+
 						$description = $row["description"];
 						$artistId = $row["artistId"];
 						$price = $row["price"];
@@ -62,10 +64,10 @@
 			
 			$output['name'] = $name;
 			$output['imagePath'] = $imagePath;
-			$output['imagePath'] = "Resources/Monalisa.jpg";
 			$output['description'] = $description;
 			$output['artistId'] = $artistId;
 			$output['price'] = $price;
+
 			return $output;
 
 		}

@@ -104,79 +104,89 @@
 					document.getElementById('selectedPaintingName').innerHTML = selectedArt;
 				}
 				function artwork1() {
-					<?php //$result = $thisDb->fetchArtData(1); ?>
+					<?php $result = $thisDb->fetchArtData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = <?php //echo "\"$result['imagePath']\"";?>;
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt1()'> Mona Lisa</span></a> </br> Description:  is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci<br>Price: $800 M";
+					document.getElementById("artImage").src = <?php echo "\"" . $result["imagePath"] . "\"";?>;
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt1()'><?php echo $result["name"];?> </span></a> </br> Description:  <?php echo $result["shortDescription"];?><br>Price: $<?php echo $result["price"];?>";
 				}
 
 				function showArt1() {
+					<?php $result = $thisDb->fetchArtData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/Monalisa.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of Production: 1503–06, perhaps continuing until c. 1517<br>Type of the Painting Color: Oil<br>Dimensions: 65 cm x 90 cm<br>Location: Musée du Louvre, Paris<br>Artist: Leonardo da Vinci<br>Price: $800 M<br>Genre: Portrait";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>Price: $<?php echo $result["price"];?><br>Genre: Portrait";
 					selectedArt = "Monal Lisa";
 				}
 
 				function artwork2() {
+					<?php $result = $thisDb->fetchArtData(2); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/night.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt2()'>The Night Watch</span></a> </br> Description: is a 1642 painting by Rembrandt van Rijn. It is in the collection of the Amsterdam Museum but is prominently displayed in the Rijksmuseum as the best known painting in its collection.  <br>Price: $23,000";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt2()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>  <br>Price: $<?php echo $result["price"];?>";
 				}
+				<?php unset($result); ?>
 
 				function showArt2() {
+					<?php $result = $thisDb->fetchArtData(2); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/night.jpg";
-					document.getElementById("artDescription2").innerHTML ="Date of Production: 1642<br>Type of the Painting Color: Oil<br>Dimensions: 363 cm × 437 cm<br>Location: Amsterdam Museum, Paris<br>Artist: Rembrandt van Rijn<br>Price: $23,000<br>Genre: Baroque";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>Price: $<?php echo $result["price"];?><br>Genre: Baroque";
 					selectedArt = "The Night Watch";
 				}
-
+<?php unset($result); ?>
 				function artwork3() {
+					<?php $result = $thisDb->fetchArtData(3); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/thirdclass.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt3()'>Third Class Carriage</span></a> </br> Description: The Third-Class Carriage is a c. 1862–1864 oil on canvas painting by Honoré Daumier, in the collection of the Metropolitan Museum of Art.  <br>Price: $40,000";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt3()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>  <br>Price: $<?php echo $result["price"];?>";
 				}
-
+<?php unset($result); ?>
 				function showArt3() {
+					<?php $result = $thisDb->fetchArtData(3); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/thirdclass.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of Production: 1862–1864<br>Type of the Painting Color: Oil<br>Dimensions: 65.4 cm × 90.2 cm<br>Location: Metropolitan Museum of Art<br>Artist: Honoré Daumier<br>Price: $40,000<br>Genre: Realism";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>Price: $<?php echo $result["price"];?><br>Genre: Realism";
 					selectedArt = "Third Class Carriage";
 				}
-
+<?php unset($result); ?>
 				function artwork4() {
+					<?php $result = $thisDb->fetchArtData(4); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/starry.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt4()'> The Starry Night</span></a> </br>Description: The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence <br> Price: $150 M";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt4()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>  <br>Price: $<?php echo $result["price"];?>";
 				}
-
+<?php unset($result); ?>
 				function showArt4() {
+					<?php $result = $thisDb->fetchArtData(4); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/starry.jpg";
-					document.getElementById("artDescription2").innerHTML = "Date of Production: June 1889<br>Type of the Painting Color: Oil<br>Dimensions: 74 cm x 92 cm<br>Location: Museum of Modern Art<br>Artist: Vincent van Gogh<br>Price: $150 M<br>Genre: Landscape";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>Price: $<?php echo $result["price"];?><br>Genre: Landscape";
 					selectedArt = "The Starry Night";
 				}
-
+<?php unset($result); ?>
 				function artwork5() {
+					<?php $result = $thisDb->fetchArtData(5); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
-					document.getElementById("artImage").src = "Resources/guer.jpg";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt5()'> Guernica</span></a> </br> Description: Guernica is a mural-sized oil painting on canvas by Spanish artist Pablo Picasso completed in June 1937 <br>Price: $179 M";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArt5()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>  <br>Price: $<?php echo $result["price"];?>";
 
 				}
-
+<?php unset($result); ?>
 				function showArt5() {
+					<?php $result = $thisDb->fetchArtData(5); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
-					document.getElementById("artImage2").src = "Resources/guer.jpg";
-					document.getElementById("artDescription2").innerHTML =  "Date of Production: April 26, 1937–June 1937<br>Type of the Painting Color: Oil<br>Dimensions: 3.49 m x 7.77 m<br>Location: Museo Nacional Centro de Arte Reina Sofía<br>Artist: Pablo Picasso<br>Price: $179 M<br>Genre: Abstract";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>Price: $<?php echo $result["price"];?><br>Genre: Abstract";
 					selectedArt = "Guernica";
 				}
 

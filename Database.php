@@ -31,7 +31,38 @@
 			}
 		}
 		 
+		function fetchArtData($artId){
+		/*	$query = 'SELECT * FROM artworks WHERE artId=' . $artId;
+			$name = '';
+			$imagePath = '';
+			$description = '';
+			$artistId = -1;
+			$price = 0;
+			$output = array();
+			$result = $this->connection->query($query);
 
+			try{
+				if ($result->num_rows == 1) {
+					$row = $result->fetch_assoc()
+					$name = $row["name"];
+					$imagePath = $row["imagePath"];
+					$description = $row["description"];
+					$artistId = $row["artistId"];
+					$price = $row["price"];
+				} else {
+				    echo "0 results";
+				}
+			}catch(Exception $e){
+			    echo $e->errorMessage();
+			}
+			$output['name'] = $name;
+			$output['imagePath'] = $imagePath;
+			$output['description'] = $description;
+			$output['artistId'] = $artistId;
+			$output['price'] = $price;
+			return $output;
+*/
+		}
 		
 	}
 

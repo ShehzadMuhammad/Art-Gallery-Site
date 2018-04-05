@@ -53,7 +53,7 @@
 		
 		}
 		function fetchMuseumData($id){
-			$query = 'SELECT * FROM meusems WHERE museumID=' . $id;
+			$query = 'SELECT * FROM museums WHERE museumID=' . $id;
 			$result = $this->connection->query($query);
 			try{
 				if ($result->num_rows == 1) {
@@ -88,6 +88,20 @@
 			}
 			
 
+		}
+
+		function loadAllArtworks(){
+			$query = 'SELECT name, imagePath FROM artworks';
+			$result = $this->connection->query($query);
+			try{
+				if ($result->num_rows > 0) {
+					return $result;
+				} else {
+				    echo "0 results";
+				}
+			}catch(Exception $e){
+				echo e;
+			}
 		}
 		
 	}

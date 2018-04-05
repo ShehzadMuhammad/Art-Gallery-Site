@@ -195,7 +195,7 @@
 					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>Price: $<?php echo $result["price"];?><br>Genre: Abstract";
 					selectedArt = "Guernica";
 				}
-				function artist1() {
+					function artist1() {
 					<?php $result = $thisDb->fetchArtistData(1); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
@@ -214,7 +214,7 @@
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist2()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 				function showArtist2() {
 					<?php $result = $thisDb->fetchArtistData(2); ?>
@@ -228,7 +228,7 @@
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist3()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 				function showArtist3() {
 					<?php $result = $thisDb->fetchArtistData(3); ?>
@@ -242,7 +242,7 @@
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist4()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 				function showArtist4() {
 					<?php $result = $thisDb->fetchArtistData(4); ?>
@@ -256,7 +256,7 @@
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist5()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["information"];?>";
 				}
 				function showArtist5() {
 					<?php $result = $thisDb->fetchArtistData(5); ?>
@@ -271,7 +271,7 @@
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result['shortDescription'];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showMuseum1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result['shortDescription'];?>";
 				}
 				function showMuseum1() {
 					<?php $result = $thisDb->fetchMuseumData(1); ?>
@@ -281,42 +281,57 @@
 					document.getElementById("artDescription2").innerHTML = "<?php echo $result['longDescription'];?>";
 				}
 					function museum2() {
-					<?php $result = $thisDb->fetchArtData(2); ?>
+					<?php $result = $thisDb->fetchMuseumData(2); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showMuseum2()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
 				}
 				function showMuseum2() {
-					<?php $result = $thisDb->fetchArtData(2); ?>
+					<?php $result = $thisDb->fetchMuseumData(2); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
 					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
 				}
 				function museum3() {
-					<?php $result = $thisDb->fetchArtData(3); ?>
+					<?php $result = $thisDb->fetchMuseumData(3); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showMuseum3()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
 				}
 				function showMuseum3() {
-					<?php $result = $thisDb->fetchArtData(3); ?>
+					<?php $result = $thisDb->fetchMuseumData(3); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
 					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
 				}
 				function museum4() {
-					<?php $result = $thisDb->fetchArtData(4); ?>
+					<?php $result = $thisDb->fetchMuseumData(4); ?>
 					document.getElementById("ArtSection").style.visibility = "visible";
 					document.getElementById("ArtSection2").style.visibility = "hidden";
 					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
-					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showArtist1()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showMuseum4()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
 				}
 				function showMuseum4() {
-					<?php $result = $thisDb->fetchArtData(4); ?>
+					<?php $result = $thisDb->fetchMuseumData(4); ?>
+					document.getElementById("ArtSection").style.visibility = "hidden";
+					document.getElementById("ArtSection2").style.visibility = "visible";
+					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription2").innerHTML = "<?php echo $result["longDescription"];?>";
+				}
+
+				function museum5() {
+					<?php $result = $thisDb->fetchMuseumData(5); ?>
+					document.getElementById("ArtSection").style.visibility = "visible";
+					document.getElementById("ArtSection2").style.visibility = "hidden";
+					document.getElementById("artImage").src = "<?php echo $result["imagePath"];?>";
+					document.getElementById("artDescription").innerHTML = "Name: <a><span onClick='showMuseum5()'><?php echo $result["name"];?></span></a> </br> Description: <?php echo $result["shortDescription"];?>";
+				}
+				function showMuseum5() {
+					<?php $result = $thisDb->fetchMuseumData(5); ?>
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
@@ -332,6 +347,9 @@
 					document.getElementById("SearchResults").style.visibility = "visible";
 					var textVal = document.getElementById("seeName").value;
 					var x = searchBarArt(textVal);
+					document.getElementById('searchName').innerHTML = x[0];
+					document.getElementById('searchImage').src=x[1];
+
 
 				}
 			</script>
@@ -353,7 +371,7 @@
 
 			</a>
 			<div id="search"  style="visibility: hidden;">
-				<input type="text" name="ting">
+				<input type="text" id="seeName">
 				<button onclick="doSearch()">Submit</button>
 			</div>
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="openModalByShoppingCart();"><img src="Resources/shopping-cart.svg" width="10%" height="10%"></button>

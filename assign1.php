@@ -85,6 +85,26 @@
 					}else{
 						details["shipping"] = 39.99;
 					}
+					/*var nameText = document.createNode('input');
+					nameText.type="text";
+					nameText.value=details["name"];
+					nameText.name="name";
+					document.getElementById("modalForm").appendChild(nameText);
+					var priceValue = document.createNode('input');
+					priceValue.type="number";
+					priceValue.value=details["price"];
+					priceValue.name="price";
+					document.getElementById("modalForm").appendChild(priceValue);*/
+					//document.getElementById("modalForm")
+					var request = $.ajax({
+						type: "POST",
+						url: "shoppingcart.php",
+						data: {name: details["name"], price: details['price'], quantity: details["quantity"], shipping: details["shipping"]},
+					    dataType: "html"
+					});
+					request.fail(function(jqXHR, textStatus) {
+						alert( "Request failed: " + textStatus );
+					});
 					
 					purchasedArt.push(details);
 					console.log(details);
@@ -482,13 +502,14 @@
 							<h4 class="modal-title">Modal Header</h4>
 						</div>
 					<div class="modal-body">
-						<form onsubmit="setPurchase()">
+						<!--<form id="modalForm" onsubmit="setPurchase()" action="shoppingcart.php" method="POST">-->
+						<form id="modalForm" onsubmit="setPurchase()" >
 							Painting:
 							<div id="staticPaintingName">
 								<p id="selectedPaintingName"></p>
 							</div>
 							<div >
-								<select id="dynamicPaintingName" name="paintings">
+								<select id="dynamicPaintingName" name="name">
 									<option value="The Starry Night">The Starry Night</option>
 									<option value="The Night Watch">The Night Watch</option>
 									<option value="Third Class Carriage">Third Class Carriagef</option>
@@ -501,9 +522,9 @@
 							Quantity: <input type="number" id="purchaseQuantity" name="quantity" min="1" max="5" value="0">
 							<br />
 							Shipping Plan: <br/>
-							<input id="ship1" type="radio" name="shippingPlan" value="standard" checked>Standard (2-3 weeks): $4.99 <br/>
-							<input id="ship2" type="radio" name="shippingPlan" value="express">Express (2-5 days): $14.99 <br/>
-							<input id="ship3" type="radio" name="shippingPlan" value="nextDay">Next Day: $39.99 <br />
+							<input id="ship1" type="radio" name="shippingPlan" value="4.99" checked>Standard (2-3 weeks): $4.99 <br/>
+							<input id="ship2" type="radio" name="shippingPlan" value="14.99">Express (2-5 days): $14.99 <br/>
+							<input id="ship3" type="radio" name="shippingPlan" value="39.99">Next Day: $39.99 <br />
 							<br>
 							<button onclick="calcInvoice();">Calculate Invoice</button>
 							<br>

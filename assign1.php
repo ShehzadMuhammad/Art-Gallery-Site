@@ -45,7 +45,7 @@
 							while($row = $allArtworks->fetch_assoc()) {
 								$name = $row['name'];
 								$path = $row['imagePath'];
-								echo "case \"$name\": imagePath = \"$path\";\n";
+								echo "case \"$name\": imagePath = \"$path\"; break;\n";
 							}
 						?>
 
@@ -352,6 +352,9 @@
 
 
 				}
+				function maintainWindow(){
+					window.open("maintain.php", "my popups");
+				}
 			</script>
 		
 		<div>
@@ -370,9 +373,15 @@
 					<button>Search</button>
 
 			</a>
-			<div id="search"  style="visibility: hidden;">
+			<a style="text-decoration: none" href="#" onclick="maintainWindow()">
+			
+					<button>Maintain</button>
+
+			</a>
+			<div id="search"  style="visibility: hidden; float: right;">
+				<br>
 				<input type="text" id="seeName">
-				<button onclick="doSearch()">Submit</button>
+				<button onclick="doSearch()">Submit</button>&nbsp;&nbsp;&nbsp;
 			</div>
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="openModalByShoppingCart();"><img src="Resources/shopping-cart.svg" width="10%" height="10%"></button>
 		</div>

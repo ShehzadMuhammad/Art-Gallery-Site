@@ -69,7 +69,7 @@
 					}else{
 						details["name"] = dynamicName.value;
 					}
-					if(details["name"] == "Monal Lisa") details["price"] = 800000000;
+					if(details["name"] == "Mona Lisa") details["price"] = 800000000;
 					else if(details["name"] == "The Night Watch") details["price"] = 23000;
 					else if(details["name"] == "Third Class Carriage") details["price"] = 40000;
 					else if(details["name"] == "The Starry Night") details["price"] = 150000000;
@@ -99,7 +99,7 @@
 					var request = $.ajax({
 						type: "POST",
 						url: "shoppingcart.php",
-						data: {name: details["name"], price: details['price'], quantity: details["quantity"], shipping: details["shipping"]},
+						data: {name: dynamicName.value, quantity: quantity.value, shipping: details["shipping"]},
 					    dataType: "html"
 					});
 					request.fail(function(jqXHR, textStatus) {
@@ -130,8 +130,10 @@
 				function openModal(){
 					document.getElementById('myModal').style.visibility='visible';
 					document.getElementById('staticPaintingName').style.visibility='visible';
-					document.getElementById('dynamicPaintingName').style.visibility='hidden';
-					document.getElementById('selectedPaintingName').innerHTML = selectedArt;
+					//document.getElementById('dynamicPaintingName').style.visibility='hidden';
+					//document.getElementById('selectedPaintingName').innerHTML = selectedArt;
+					document.getElementById('staticPaintingName').style.visibility='hidden';
+					document.getElementById('dynamicPaintingName').style.visibility='visible';
 				}
 				function artwork1() {
 					<?php $result = $thisDb->fetchArtData(1); ?>
@@ -142,6 +144,7 @@
 				}
 				function showArt1() {
 					<?php $result = $thisDb->fetchArtData(1); ?>
+					document.getElementById("dynamicPaintingName").value="<?php echo $result["name"];?>";
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
@@ -158,6 +161,7 @@
 				<?php unset($result); ?>
 				function showArt2() {
 					<?php $result = $thisDb->fetchArtData(2); ?>
+					document.getElementById("dynamicPaintingName").value="<?php echo $result["name"];?>";
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
@@ -175,6 +179,7 @@
 <?php unset($result); ?>
 				function showArt3() {
 					<?php $result = $thisDb->fetchArtData(3); ?>
+					document.getElementById("dynamicPaintingName").value="<?php echo $result["name"];?>";
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
@@ -192,6 +197,7 @@
 <?php unset($result); ?>
 				function showArt4() {
 					<?php $result = $thisDb->fetchArtData(4); ?>
+					document.getElementById("dynamicPaintingName").value="<?php echo $result["name"];?>";
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
@@ -209,6 +215,7 @@
 <?php unset($result); ?>
 				function showArt5() {
 					<?php $result = $thisDb->fetchArtData(5); ?>
+					document.getElementById("dynamicPaintingName").value="<?php echo $result["name"];?>";
 					document.getElementById("ArtSection").style.visibility = "hidden";
 					document.getElementById("ArtSection2").style.visibility = "visible";
 					document.getElementById("artImage2").src = "<?php echo $result["imagePath"];?>";
@@ -512,7 +519,7 @@
 								<select id="dynamicPaintingName" name="name">
 									<option value="The Starry Night">The Starry Night</option>
 									<option value="The Night Watch">The Night Watch</option>
-									<option value="Third Class Carriage">Third Class Carriagef</option>
+									<option value="Third Class Carriage">Third Class Carriage</option>
 									<option value="Guernica">Guernica</option>
 									<option value="Mona Lisa">Mona Lisa</option>
 								</select>
@@ -522,9 +529,9 @@
 							Quantity: <input type="number" id="purchaseQuantity" name="quantity" min="1" max="5" value="0">
 							<br />
 							Shipping Plan: <br/>
-							<input id="ship1" type="radio" name="shippingPlan" value="4.99" checked>Standard (2-3 weeks): $4.99 <br/>
-							<input id="ship2" type="radio" name="shippingPlan" value="14.99">Express (2-5 days): $14.99 <br/>
-							<input id="ship3" type="radio" name="shippingPlan" value="39.99">Next Day: $39.99 <br />
+							<input id="ship1" type="radio" name="shipping" value="4.99" checked>Standard (2-3 weeks): $4.99 <br/>
+							<input id="ship2" type="radio" name="shipping" value="14.99">Express (2-5 days): $14.99 <br/>
+							<input id="ship3" type="radio" name="shipping" value="39.99">Next Day: $39.99 <br />
 							<br>
 							<button onclick="calcInvoice();">Calculate Invoice</button>
 							<br>

@@ -4,7 +4,14 @@
 	</head>
 	<body>
 		<form>
-			<select id="tableSelect" name="table">
+		<select id="mode" name="mode">
+			<option value="" selected="selected"></option>
+				<option value="add">add</option>
+				<option value="delete">delete</option>
+				<option value="modify">modify</option>
+		</select>
+		
+			<select id="tableSelect" name="table" style="display: none;">
 				<option value="" selected="selected"></option>
 				<option value="artists">artists</option>
 				<option value="artworks">artworks</option>
@@ -15,54 +22,36 @@
 				<option value="shoppingcart">shoppingcart</option>
 				<option value="reviews">reviews</option>
 			</select>
+		
+			<div id="fieldSection">
+
+			</div>
 		</form>
-		<div>
-			<form id="artists" style="display:none">
-				
-			</form>
-			<form id="artworks" style="display:none">
-				
-			</form>
-			<form id="museums" style="display:none">
-				
-			</form>
-
-			<form id="images" style="display:none">
-				
-			</form>
-
-			<form id="genres" style="display:none">
-				
-			</form>
-
-			<form id="subjects" style="display:none">
-				
-			</form>
-
-			<form id="museums" style="display:none">
-				
-			</form>
-			<form id="threeFields">
-				<div id="fieldSection">
-
-				</div>
-				<p id="doot">
-				</p>
-			</form>
-		</div>
 		<script>
-			$("#tableSelect").on("change", function() {
+			$("#mode").on("change", function() {
 				var x = $(this).val();
-				selectTable(x);
+				$("#tableSelect").show();
+				$("#tableSelect").off();
+				//If they choose to add to database, activate the listener for 
+				if(x == "add"){
+					$("#tableSelect").on("change", function() {
+						var x = $(this).val();
+						selectTableAdd(x);
+
+
+					});
+				}else if(x == "delete"){
+
+				}else if(x == "modify"){
+
+				}
+
 
 
 			});
-			function selectTable(table){
+			
+			function selectTableAdd(table){
 				var numFields = 0;
-				//var fieldDiv = document.getElementById("fieldSection");
-				//while (fieldDiv.firstChild) {
-				//	fieldDiv.removeChild(fieldDiv.firstChild);
-				//}
 				document.getElementById("fieldSection").innerHTML="";
 				switch(table){
 					case "images": break;
@@ -71,7 +60,6 @@
 					case "museums": numFields = 4; break;;
 					case "genres": case "subjects": numFields =1; break;
 					
-					//document.getElementById("fieldSection").innerHTML 
 
 				}
 				for(var i = 0; i < numFields; i++){

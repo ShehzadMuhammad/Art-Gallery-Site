@@ -3,7 +3,7 @@
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<form>
+		<form id="QueryForm">
 		<select id="mode" name="mode">
 			<option value="" selected="selected"></option>
 				<option value="add">add</option>
@@ -30,9 +30,15 @@
 		<script>
 			$("#mode").on("change", function() {
 				var x = $(this).val();
-				$("#tableSelect").show();
+				document.getElementById("fieldSection").innerHTML="";
+				
 				$("#tableSelect").off();
 				//If they choose to add to database, activate the listener for 
+				if(x ==""){
+					$("#tableSelect").hide();
+				}else{
+					$("#tableSelect").show();
+				}
 				if(x == "add"){
 					$("#tableSelect").on("change", function() {
 						var x = $(this).val();
@@ -41,15 +47,50 @@
 
 					});
 				}else if(x == "delete"){
+					$("#tableSelect").on("change", function() {
+						var x = $(this).val();
+						selectTableDelete(x);
 
+
+					});
 				}else if(x == "modify"){
+					$("#tableSelect").on("change", function() {
+						var x = $(this).val();
+						selectTableModify(x);
 
+
+					});
 				}
 
 
 
 			});
-			
+			function selectTableDelete(table){
+				var numFields = 0;
+				document.getElementById("fieldSection").innerHTML="";
+				document.getElementById("fieldSection").appendChild(document.createTextNode("Please insert conditions for deleting. Ex: \"artId=1 and name=\'Mona Lisa\'\""));
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var query = document.createElement("input");
+				query.type="text";
+				query.name="deleteQuery";
+				document.getElementById("fieldSection").appendChild(query);
+			}
+			function selectTableModify(table){
+				var numFields = 0;
+				document.getElementById("fieldSection").innerHTML="";
+				document.getElementById("fieldSection").appendChild(document.createTextNode("Please insert conditions for updating. Ex: Fields to update: \"name=\'Shmoobly\'\"  Conditions: \"name=\'Mona Lisa\'\""));
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				document.getElementById("fieldSection").appendChild(document.createTextNode("SET"));
+				var fields = document.createElement("input");
+				fields.type="text";
+				fields.name="updateQueryFields";
+				document.getElementById("fieldSection").appendChild(fields);
+				document.getElementById("fieldSection").appendChild(document.createTextNode("WHERE"));
+				var conditions = document.createElement("input");
+				conditions.type="text";
+				conditions.name="updateQueryConditions";
+				document.getElementById("fieldSection").appendChild(conditions);
+			}
 			function selectTableAdd(table){
 				var numFields = 0;
 				document.getElementById("fieldSection").innerHTML="";

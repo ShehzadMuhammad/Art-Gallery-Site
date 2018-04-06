@@ -13,16 +13,26 @@
 	$deleteQuery = "";
 	if(isset($_POST['table'])){
 		$table = $_POST['table'];
-	}
+	}else{
+				die('input invalide. Please try again. ' . $thisDb->connection->error);
+			}
 	if(isset($_POST['deleteQuery'])){
 		$deleteQuery = $_POST['deleteQuery'];
-	}
+	}else{
+				die('input invalide. Please try again. ' . $thisDb->connection->error);
+			}
 	$fullQuery = "DELETE FROM " . $table . " WHERE " . $deleteQuery;
-	echo $fullQuery;
+	echo "Query: " . $fullQuery . "<br>";
 	
 	if ($thisDb->connection->query($fullQuery) === TRUE) {
 	       echo "Successfully Deleted";
 	} else {
 	    echo "Error Deleting: " . $conn->error . "<br>";
 	}
+
 ?>
+<br>
+		<a href="maintain.php"><button>Back to Maintain</button></a>
+		<br>
+		<br>
+		<a href="assign1.php"><button>Back to Main Page</button></a>

@@ -144,7 +144,7 @@
 					document.getElementById("fieldSection").appendChild(document.createElement("br"));
 
 				}
-				document.getElementById("QueryForm").action="update.php";
+				document.getElementById("QueryForm").action="add.php";
 				document.getElementById("fieldSection").appendChild(document.createElement("br"));
 				var submit = document.createElement("input");
 				submit.type="submit";

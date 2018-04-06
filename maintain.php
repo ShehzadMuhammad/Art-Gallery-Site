@@ -3,7 +3,7 @@
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<form id="QueryForm">
+		<form id="QueryForm" method="POST" action="">
 		<select id="mode" name="mode">
 			<option value="" selected="selected"></option>
 				<option value="add">add</option>
@@ -74,6 +74,19 @@
 				query.type="text";
 				query.name="deleteQuery";
 				document.getElementById("fieldSection").appendChild(query);
+				document.getElementById("QueryForm").action="delete.php";
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var submit = document.createElement("input");
+				submit.type="submit";
+				submit.value="Execute Query";
+				document.getElementById("fieldSection").appendChild(submit);
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var schema = document.createElement("IMG");
+				schema.src = "Resources/" + table + "Schema.png";
+				document.getElementById("fieldSection").appendChild(schema);
+
+
+
 			}
 			function selectTableModify(table){
 				var numFields = 0;
@@ -90,6 +103,16 @@
 				conditions.type="text";
 				conditions.name="updateQueryConditions";
 				document.getElementById("fieldSection").appendChild(conditions);
+				document.getElementById("QueryForm").action="modify.php";
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var submit = document.createElement("input");
+				submit.type="submit";
+				submit.value="Execute Query";
+				document.getElementById("fieldSection").appendChild(submit);
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var schema = document.createElement("IMG");
+				schema.src = "Resources/" + table + "Schema.png";
+				document.getElementById("fieldSection").appendChild(schema);
 			}
 			function selectTableAdd(table){
 				var numFields = 0;
@@ -100,6 +123,7 @@
 					case "artworks": numFields = 6; break;
 					case "museums": numFields = 4; break;;
 					case "genres": case "subjects": numFields =1; break;
+
 					
 
 				}
@@ -120,9 +144,16 @@
 					document.getElementById("fieldSection").appendChild(document.createElement("br"));
 
 				}
-				//$("#" + $(this).val()).show().siblings().hide();
-				//$("#tableSelect").show();
-				//document.getElementById('a').innerHTML="nope";
+				document.getElementById("QueryForm").action="update.php";
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var submit = document.createElement("input");
+				submit.type="submit";
+				submit.value="Execute Query";
+				document.getElementById("fieldSection").appendChild(submit);
+				document.getElementById("fieldSection").appendChild(document.createElement("br"));
+				var schema = document.createElement("IMG");
+				schema.src = "Resources/" + table + "Schema.png";
+				document.getElementById("fieldSection").appendChild(schema);
 			}
 
 		</script>

@@ -23,7 +23,7 @@
 			}
 			$fullQuery = $fullQuery . $table . " (";
 			switch($table){
-					case "images": break;
+					case "images": 
 					case "artists": case "shoppingcart": case "reviews": $numFields = 3; break;
 					case "artworks": $numFields = 6; break;
 					case "museums": $numFields = 4; break;;

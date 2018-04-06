@@ -82,6 +82,7 @@
 						details["shipping"] = 4.99;
 					}else if(ship2.checked){
 						details["shipping"] = 14.99;
+					
 					}else{
 						details["shipping"] = 39.99;
 					}

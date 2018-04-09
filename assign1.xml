@@ -44,21 +44,6 @@
 </artist>
 
 
-<artist>
-	<artistID>6</artistID>
-	<name>Honore Daumier</name>
-</artist>
-
-<artist>
-	<artistID>7</artistID>
-	<name>Vincent van Gogh</name>
-</artist>
-
-<artist>
-	<artistID>8</artistID>
-	<name>Guernica</name>
-</artist>
-
 <artworks>
 <artistID>2</artistID>
 <name>Mona Lisa</name>
